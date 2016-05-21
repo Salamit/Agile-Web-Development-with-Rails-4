@@ -17,7 +17,7 @@ class ProductTest < ActiveSupport::TestCase
     						  image_url:    "zzz.jpg")
     	product.price = -1
     	assert product.invalid?
-    	assert_equal ["must be grater than or equal to 0.01"],
+    	assert_equal ["must be greater than or equal to 0.01"],
     		product.errors[:price]
 
     	product.price = 0
@@ -52,7 +52,7 @@ class ProductTest < ActiveSupport::TestCase
 
 
   	test "product is not valid without a unique title" do
-  		product = Product.new(title:        product(:ruby).title,
+  		product = Product.new(title:        products(:ruby).title,
   		                      description:  "yyy",
   		                      price:        1,
   		                      image_url:    "fred.gif")
