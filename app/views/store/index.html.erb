@@ -4,6 +4,8 @@
 
 <h1>Your Pragmatic Catalog</h1>
 
+<%= @counter_above_five %>
+
 <% cache ['store', Product.latest] do %>
   <% @products.each do |product| %>
     <% cache ['entry', product] do %>
@@ -19,6 +21,9 @@
 	<% end %>
   <% end %>
 <% end %>
+
+
+
 
 
 

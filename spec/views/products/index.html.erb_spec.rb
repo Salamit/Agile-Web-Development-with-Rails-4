@@ -6,7 +6,7 @@ RSpec.describe "products/index", type: :view do
       Product.create!(
         :title => "Title",
         :description => "MyText",
-        :image_url => "Image Url",
+        :image_url => "Image Url1.jpg",
         :price => "9.99"
       ),
       Product.create!(
